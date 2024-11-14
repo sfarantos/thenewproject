@@ -1,0 +1,16 @@
+<!-- <ul id = 'kati' >
+    <li> {{u1.l1}} {{u1.p1}} </li>
+    <li> {{u2.l2}} {{u2.p2}} </li>
+    <li> {{u3.l3}} {{u3.p3}} </li>
+    <li> {{u4.l4}} {{u4.p4}} </li>
+  </ul>  -->
+  
+
+  <h2>{{ userlist | json}}</h2>
+
+  @for(user of userlist; track $index){
+    {{user.login }} , {{user.pw}}
+    <br>
+    <app-user [userinfo]="user"></app-user>
+  }
+
